@@ -20,7 +20,7 @@
 
 /* Variable to store all the checkboxes - You will use this in the event listener below to create a loop */
 const checkboxes = document.querySelectorAll('.super-stats input');
-
+console.log(checkboxes);
 
 /**
  * Event listener for checkboxes
@@ -31,10 +31,10 @@ document.querySelector('.super-stats').addEventListener('change', e => {
 
   // 1) Create a variable named clicked to store the checkbox input that was just clicked
   //    - `e.target` will be helpful here
-const clicked = e.target.value;
+const clicked = e.target;
   // 2) Create a variable named clickedType to store the `data-type` attribute of the checkbox that was just clicked
   //    - the `getAttribute` method will be helpful here
-const clickedType = document.querySelector('.form-section input').getAttribute('data-type'); 
+const clickedType = clicked.getAttribute('data-type'); 
   // 3) Log out the two variables you just created to confirm their values
 console.log(clicked);
 console.log(clickedType);
